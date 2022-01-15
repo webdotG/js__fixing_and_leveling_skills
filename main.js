@@ -44,3 +44,26 @@ window.addEventListener('scroll', function(){
 		console.log(scrollPosition)                     //чтобы вывести позицию скролла 
 		header.classList.add('position');               //при скролле добавляю класс
 });
+
+//--------------------------------как сохранить повещеный класс если страница обновилась на половине просмотра
+//--------------------------------по сути скролла нет после перезагрузки тогда пропадет класс
+//--------------------------------надо проверить в каком месте DOCUMENT я нахожусь
+document.addEventListener('DOMcontentLoaded', function(){
+	let scrollPosition = window.scrollY;   
+	if(scrollPosition > 0){
+		header.classList.add('back--transparent');    
+	} else {
+		header.classList.remove('back--transparent'); 
+	}
+});
+
+const tabBtn = document.querySelectorAll('#test-btn');
+//tabBtn.addEventListener('click', function() {          НЕЛЬЗЯ взять и так просто повесить обработчик событий на все кнопки разом
+//	console.log('clicked');
+//});
+//-------------------------------------------- а вот так МОЖНО
+for(let allBtn of tabBtn){										//в цикл for создаю новую переменную со значением tabBtn в значение которой я записал все кнопки
+	allBtn.addEventListener('click', function() {      //и вот теперь могу повесить отлов события    
+		console.log(allBtn.textContent);	
+})
+}
