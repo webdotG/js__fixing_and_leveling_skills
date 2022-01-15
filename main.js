@@ -1,6 +1,6 @@
 const globalVariable =  ('/global') // глобальная переменная
 
-const header = document.getElementById('.header')
+const header = document.querySelector('.header')
 console.log(typeof header);
 
 const navItem = document.querySelectorAll('.navigation__item');
@@ -26,3 +26,21 @@ function simpleFunctionSeconde( a, b, c ){ //обозначаю параметр
 simpleFunctionSeconde(100, 50, 25); // задаю значения параметрам с которыми будет производиться действие описанное выше
 let sum = simpleFunctionSeconde(100, 50, 25); //после RETURN могу заносить значение функции в глобальные переменные
 console.log(sum)
+
+
+//                                                события
+
+window.addEventListener('scroll', function(){
+		console.log('scroll page');
+		let scrollPosition = window.scrollY;   
+		//	let scrollPosition = window.pageYOffset;    или можно таким образом узнать позицию скролла
+		
+		if(scrollPosition > 0){
+			header.classList.add('back--transparent');    //если позиция скролла больше 0 то добавляю класс
+		} else {
+			header.classList.remove('back--transparent'); //в противном случае удаляю класс
+		}
+
+		console.log(scrollPosition)                     //чтобы вывести позицию скролла 
+		header.classList.add('position');               //при скролле добавляю класс
+});
