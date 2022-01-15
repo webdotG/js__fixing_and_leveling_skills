@@ -67,3 +67,6 @@ for(let allBtn of tabBtn){										//в цикл for создаю новую п
 		console.log(allBtn.textContent);	
 })
 }
+
+// ----------------------------------------массив и его перебор при помощи FOREACH
+
