@@ -5,28 +5,28 @@ body{
 }
 
 ul{
-	margin-left: 0;
-	padding-left: 0;
+	margin: 0;
+	padding: 0;
 }
 li{
 	list-style-type: none;
 }
 
 header{
-	padding-top: 50px;
+	padding-top: 25px;
 	display: flex;
 	justify-content: center;
 }
 
 .navigation__list{
+	width: 320px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 .navigation__item{
 	width: 75px;
 	height: 35px;
-	margin-right: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -40,7 +40,7 @@ header{
 	margin-right: 0;
 }
 
-.navigation__item:hover{
+.active{
 	background-color:rgba(0, 0, 0, 0.5);
 	box-shadow: 0 6px 9px 1px gray;
 }
