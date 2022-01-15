@@ -36,8 +36,8 @@ nav{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	color: white;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: rgba(255, 255, 255, 0.8);
 	border-radius: 10px;
 	font-size: 14px;
 	position: relative;
@@ -72,7 +72,7 @@ section{
 
 
 .active{
-	background-color:rgba(0, 0, 0, 0.3);
+	background-color:rgba(0, 0, 0, 0.2);
 	box-shadow: 0 6px 9px 1px gray;
 }
 
@@ -83,4 +83,12 @@ section{
 
 .back--transparent{
 	background: transparent;
+}
+
+img{
+	display: none;
+}
+
+.block{
+	display: block;
 }
